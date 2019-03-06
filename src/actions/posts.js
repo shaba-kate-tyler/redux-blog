@@ -1,4 +1,4 @@
-import { getPosts } from '../services/blogsApi';
+import { getPosts } from '../services/blogApi';
 
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const fetchPosts = () => ({
