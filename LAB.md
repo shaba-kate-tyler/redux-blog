@@ -32,6 +32,8 @@ get users, posts, and comments
 * `AllUsers` display all users
 * `RegisterUser` create a new user
 * `FilterPosts` filter posts by title (for all users)
+* `UserDetailsContainer`
+* `PostDetailsContainer`
 
 ### reducers
 
