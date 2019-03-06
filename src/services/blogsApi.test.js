@@ -1,10 +1,10 @@
-import { getCommentsByPostId, getUsers, getPosts } from './blogApi';
+import { getComments, getUsers, getPosts } from './blogApi';
 
 jest.mock('./blogApi.js');
 
 describe('blogApi Tests', () => {
-  it('Returns a list of comments by postId', () => {
-    getCommentsByPostId()
+  it('Returns a list of comments', () => {
+    getComments()
       .then(res => expect(res).toHaveLength(3));
   });
   it('Returns a list of users', () => {

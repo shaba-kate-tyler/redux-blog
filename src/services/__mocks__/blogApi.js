@@ -1,4 +1,4 @@
-export const getCommentsByPostId = () => {
+export const getComments = () => {
   return Promise.all([
     {
       postId: 1,
