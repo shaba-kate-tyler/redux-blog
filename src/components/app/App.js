@@ -1,5 +1,22 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import Home from '../Home';
+import Header from '../Header';
 
 export default function App() {
-  return <h1>Hello</h1>;
+  return (
+    <Router>
+      <>
+        <Header />
+        <Switch>
+          <Route path="/users"></Route>
+          <Route path="/" component={Home}></Route>
+        </Switch>
+      </>
+    </Router> 
+  );
 }

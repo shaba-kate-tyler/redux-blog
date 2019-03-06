@@ -1,17 +1,13 @@
-import Home from './Home';
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
   Link
 } from 'react-router-dom';
 
-export default function Nav() {
+export default function Header() {
   return (
-    <Router>
-      <>
-        <Link to="/">Home</Link>
-      </>
-    </Router>
+    <>
+      <Link to="/">Home</Link>
+      <Link to="/users">Users</Link>
+    </>
   );
 }
