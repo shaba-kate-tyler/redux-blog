@@ -3,3 +3,8 @@ export const getCommentsByPostId = postId => {
     .then(res => res.json())
     .then(json => json.filter(comment => comment.postId === postId));
 };
+
+export const getUsers = () => {
+  return fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json());
+};
