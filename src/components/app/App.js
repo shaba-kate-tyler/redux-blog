@@ -13,7 +13,7 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/posts/:id"></Route>
+          <Route path="/posts/:userId/:postId"></Route>
           <Route path="/users"></Route>
           <Route path="/" component={Home}></Route>
         </Switch>

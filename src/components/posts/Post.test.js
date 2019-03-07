@@ -7,7 +7,9 @@ describe('Post', () => {
     const tree = renderer.create(
       <Post
         title={'A Post'}
-        id={'1'}
+        body={'This is a post on a rant'}
+        userId={'1'}
+        postId={'2'}
       />
     ).toJSON();
 
