@@ -8,6 +8,8 @@ describe('post actions', () => {
 
     expect(result).toEqual({
       type: 'FETCH_POSTS',
+      loadStart: 'LOAD_POSTS_START',
+      loadEnd: 'LOAD_POSTS_END',
       payload: expect.any(Promise)
     });
   });
