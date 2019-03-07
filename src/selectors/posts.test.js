@@ -1,4 +1,8 @@
-import { getAllPosts, getTop5Posts } from './posts';
+import {
+  getAllPosts,
+  getTop5Posts,
+  getPostSearchTerm
+} from './posts';
 
 describe('post selectors', () => {
   let state = {};
@@ -6,6 +10,8 @@ describe('post selectors', () => {
   beforeEach(() => {
     state = {
       posts: {
+        postSearchTerm: 'pos',
+        isLoading: false,
         posts: [
           { body: 'a pfdsafdasfdasfdafda ost' },
           { body: 'b pofdsaf dsafdsafdasst' },
@@ -33,5 +39,10 @@ describe('post selectors', () => {
       { body: 'c pos tffdsafd' },
       { body: 'c fdsafdsa' }
     ]);
+  });
+
+  it('gets post search term', () => {
+    const result = getPostSearchTerm(state);
+    expect(result).toEqual('pos');
   });
 });
