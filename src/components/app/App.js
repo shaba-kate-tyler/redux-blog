@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from '../Home';
 import Header from '../Header';
-import AllUsers from '../../containers/AllUsers';
+//import AllUsers from '../../containers/AllUsers';
 
 export default function App() {
   return (
