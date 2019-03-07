@@ -7,3 +7,14 @@ export const getTop5Posts = state => {
 };
 
 export const getPostSearchTerm = state => state.posts.postSearchTerm;
+
+export const getFilteredPosts = state => {
+  const term = getPostSearchTerm(state);
+  return getAllPosts(state)
+    .filter(post => post.title.includes(term));
+};
+
+export const getPostsForUser = (state, userId) => {
+  return getAllPosts(state)
+    .filter(post => post.userId === userId);
+};
