@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches a snapshot 1`] = `
+Array [
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>,
+  <a
+    href="/users"
+    onClick={[Function]}
+  >
+    Users
+  </a>,
+]
+`;

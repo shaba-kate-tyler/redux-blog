@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post matches a post snapshot 1`] = `
+<a
+  href="/posts/1"
+  onClick={[Function]}
+>
+  A Post
+</a>
+`;
