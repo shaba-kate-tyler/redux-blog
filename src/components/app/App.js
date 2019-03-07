@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from '../../containers/Home';
 import Header from '../Header';
-import AllUsers from '../../containers/AllUsers';
+//import AllUsers from '../../containers/AllUsers';
 
 export default function App() {
   return (
@@ -14,8 +14,8 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/posts/:id"></Route>
-          <Route path="/users" component={AllUsers}></Route>
+          <Route path="/posts/:userId/:postId"></Route>
+          <Route path="/users"></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </>
