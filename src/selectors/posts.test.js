@@ -1,4 +1,4 @@
-import { getAllPosts } from './posts';
+import { getAllPosts, getTop5Posts } from './posts';
 
 describe('post selectors', () => {
   let state = {};
@@ -7,9 +7,12 @@ describe('post selectors', () => {
     state = {
       posts: {
         posts: [
-          { a: 'a post' },
-          { b: 'b post' },
-          { c: 'c post' }
+          { body: 'a pfdsafdasfdasfdafda ost' },
+          { body: 'b pofdsaf dsafdsafdasst' },
+          { body: 'c fdsafdsa' },
+          { body: 'd poadsflk;jdaslkfjkldsafst' },
+          { body: 'c pos tffdsafd' },
+          { body: 'c post' }
         ]
       }
     };
@@ -17,10 +20,18 @@ describe('post selectors', () => {
 
   it('gets all posts', () => {
     const result = getAllPosts(state);
+    expect(result).toEqual(state.posts.posts);
+  });
+
+  it('gets top 5 posts by length', () => {
+    const result = getTop5Posts(state);
+    expect(result).toHaveLength(5);
     expect(result).toEqual([
-      { a: 'a post' },
-      { b: 'b post' },
-      { c: 'c post' }
+      { body: 'd poadsflk;jdaslkfjkldsafst' },
+      { body: 'a pfdsafdasfdasfdafda ost' },
+      { body: 'b pofdsaf dsafdsafdasst' },
+      { body: 'c pos tffdsafd' },
+      { body: 'c fdsafdsa' }
     ]);
   });
 });
