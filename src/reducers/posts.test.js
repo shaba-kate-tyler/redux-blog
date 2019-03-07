@@ -37,4 +37,5 @@ describe('reducer', () => {
       postSearchTerm: 'pos'
     });
   });
+
 });
