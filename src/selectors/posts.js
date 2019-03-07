@@ -13,3 +13,8 @@ export const getFilteredPosts = state => {
   return getAllPosts(state)
     .filter(post => post.title.includes(term));
 };
+
+export const getPostsForUser = (state, userId) => {
+  return getAllPosts(state)
+    .filter(post => post.userId === userId);
+};
