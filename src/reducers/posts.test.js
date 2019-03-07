@@ -38,4 +38,25 @@ describe('reducer', () => {
     });
   });
 
+  it('loads post start', () => {
+    const action = {
+      type: 'LOAD_POSTS_START'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      isLoading: true
+    });
+  });
+
+  it('loads post end', () => {
+    const action = {
+      type: 'LOAD_POSTS_END'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      isLoading: false
+    });
+  });
 });
