@@ -7,3 +7,9 @@ export const getTop5Posts = state => {
 };
 
 export const getPostSearchTerm = state => state.posts.postSearchTerm;
+
+export const getFilteredPosts = state => {
+  const term = getPostSearchTerm(state);
+  return getAllPosts(state)
+    .filter(post => post.title.includes(term));
+};

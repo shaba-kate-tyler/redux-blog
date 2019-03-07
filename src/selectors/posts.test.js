@@ -1,7 +1,8 @@
 import {
   getAllPosts,
   getTop5Posts,
-  getPostSearchTerm
+  getPostSearchTerm,
+  getFilteredPosts
 } from './posts';
 
 describe('post selectors', () => {
@@ -13,12 +14,30 @@ describe('post selectors', () => {
         postSearchTerm: 'pos',
         isLoading: false,
         posts: [
-          { body: 'a pfdsafdasfdasfdafda ost' },
-          { body: 'b pofdsaf dsafdsafdasst' },
-          { body: 'c fdsafdsa' },
-          { body: 'd poadsflk;jdaslkfjkldsafst' },
-          { body: 'c pos tffdsafd' },
-          { body: 'c post' }
+          { 
+            title: 'a post',
+            body: 'a pfdsafdasfdasfdafda ost'
+          },
+          { 
+            title: 'another post',
+            body: 'b pofdsaf dsafdsafdasst'
+          },
+          { 
+            title: 'other post',
+            body: 'c fdsafdsa'
+          },
+          { 
+            title: 'another other post',
+            body: 'd poadsflk;jdaslkfjkldsafst'
+          },
+          { 
+            title: 'another other other post',
+            body: 'c pos tffdsafd'
+          },
+          { 
+            title: 'another other another',
+            body: 'c post'
+          }
         ]
       }
     };
@@ -33,16 +52,57 @@ describe('post selectors', () => {
     const result = getTop5Posts(state);
     expect(result).toHaveLength(5);
     expect(result).toEqual([
-      { body: 'd poadsflk;jdaslkfjkldsafst' },
-      { body: 'a pfdsafdasfdasfdafda ost' },
-      { body: 'b pofdsaf dsafdsafdasst' },
-      { body: 'c pos tffdsafd' },
-      { body: 'c fdsafdsa' }
+      {
+        title: 'another other post',
+        body: 'd poadsflk;jdaslkfjkldsafst'
+      },
+      {
+        title: 'a post',
+        body: 'a pfdsafdasfdasfdafda ost'
+      },
+      {
+        title: 'another post',
+        body: 'b pofdsaf dsafdsafdasst'
+      },
+      {
+        title: 'another other other post',
+        body: 'c pos tffdsafd'
+      },
+      {
+        title: 'other post',
+        body: 'c fdsafdsa'
+      }
     ]);
   });
 
   it('gets post search term', () => {
     const result = getPostSearchTerm(state);
     expect(result).toEqual('pos');
+  });
+
+  it('gets filtered posts by title', () => {
+    const result = getFilteredPosts(state);
+    expect(result).toEqual([
+      { 
+        title: 'a post',
+        body: 'a pfdsafdasfdasfdafda ost'
+      },
+      { 
+        title: 'another post',
+        body: 'b pofdsaf dsafdsafdasst'
+      },
+      { 
+        title: 'other post',
+        body: 'c fdsafdsa'
+      },
+      { 
+        title: 'another other post',
+        body: 'd poadsflk;jdaslkfjkldsafst'
+      },
+      { 
+        title: 'another other other post',
+        body: 'c pos tffdsafd'
+      },
+    ]);
   });
 });
