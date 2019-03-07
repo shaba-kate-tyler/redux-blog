@@ -131,4 +131,16 @@ describe('users reducer', () => {
       isLoading: true
     });
   });
+
+  it('it updates isLoading state as false', () => {
+    const action = {
+      type: 'LOAD_USERS_END'
+    };
+
+    const result = reducer(state, action);
+    expect(result).toEqual({
+      ...state,
+      isLoading: false
+    });
+  });
 });
