@@ -1,17 +1,16 @@
-import { fetchComments } from './comments';
+import { fetchUsers } from './users';
 
 jest.mock('../services/blogApi.js');
 
 describe('user actions', () => {
-  it('gets a list of comments', () => {
-    const result = fetchComments();
-
+  it('gets all Users', () => {
+    const result = fetchUsers();
+    
     expect(result).toEqual({
-      type: 'FETCH_COMMENTS',
-      payload: expect.any(Promise),
-      loadStart: 'LOAD_COMMENTS_START',
-      loadEnd: 'LOAD_COMMENTS_END'
+      type: 'FETCH_USERS',
+      loadStart: 'LOAD_USERS_START',
+      loadEnd: 'LOAD_USERS_END',
+      payload: expect.any(Promise)
     });
   });
 });
-
