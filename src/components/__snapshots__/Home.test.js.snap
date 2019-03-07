@@ -3,40 +3,40 @@
 exports[`Home matches a snapshot 1`] = `
 <ul>
   <li>
-    <h2>
-      <a
-        href="/posts/10/1"
-        onClick={[Function]}
-      >
+    <a
+      href="/posts/10/1"
+      onClick={[Function]}
+    >
+      <h2>
         a post
-      </a>
-    </h2>
+      </h2>
+    </a>
     <p>
       This is a post
     </p>
   </li>
   <li>
-    <h2>
-      <a
-        href="/posts/11/2"
-        onClick={[Function]}
-      >
+    <a
+      href="/posts/11/2"
+      onClick={[Function]}
+    >
+      <h2>
         another post
-      </a>
-    </h2>
+      </h2>
+    </a>
     <p>
       This is a post
     </p>
   </li>
   <li>
-    <h2>
-      <a
-        href="/posts/11/3"
-        onClick={[Function]}
-      >
+    <a
+      href="/posts/11/3"
+      onClick={[Function]}
+    >
+      <h2>
         another other post
-      </a>
-    </h2>
+      </h2>
+    </a>
     <p>
       This is a post
     </p>

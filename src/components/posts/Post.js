@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Post({ title, body, userId, postId }) {
   return (
     <>
-      <Router>
-        <h2>
-          <Link to={`/posts/${userId}/${postId}`}>{title}</Link>
-        </h2>
-      </Router>
-      <p>{body}</p>
+      <Link to={`/posts/${userId}/${postId}`}>
+        <h2>{title}</h2>
+      </Link>
+        <p>{body}</p>
     </>
   );
 }
@@ -18,8 +16,8 @@ function Post({ title, body, userId, postId }) {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  userId: PropTypes.string.isRequired,
-  postId: PropTypes.string.isRequired
+  userId: PropTypes.number.isRequired,
+  postId: PropTypes.number.isRequired
 };
 
 export default Post;

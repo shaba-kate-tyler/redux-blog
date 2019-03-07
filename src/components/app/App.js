@@ -7,6 +7,8 @@ import {
 import Home from '../../containers/Home';
 import Header from '../Header';
 import UserDetails from '../../containers/UserDetails';
+import AllUsers from '../../containers/AllUsers';
+import PostDetails from '../../containers/posts/PostDetails';
 
 
 export default function App() {
@@ -15,10 +17,9 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/users"></Route>
+          <Route path="/users" component={AllUsers}></Route>
           <Route path="/users/:id" component={UserDetails}></Route>
-          {/* <Route path="/" component={Home}></Route> */}
-          <Route path="/posts/:userId/:postId"></Route>
+          <Route path="/posts/:userId/:postId" component={PostDetails}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </>

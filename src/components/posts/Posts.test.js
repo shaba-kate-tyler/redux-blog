@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Posts from './Posts';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Posts', () => {
   it('matches a snapshot of Posts', () => {
@@ -25,9 +26,11 @@ describe('Posts', () => {
       }
     ];
     const tree = renderer.create(
-      <Posts
-        posts={posts}
-      />
+      <MemoryRouter>
+        <Posts
+          posts={posts}
+        />
+      </MemoryRouter>
     );
 
     expect(tree).toMatchSnapshot();

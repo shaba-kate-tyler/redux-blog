@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Home from './Home';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Home', () => {
   it('matches a snapshot', () => {
@@ -25,7 +26,9 @@ describe('Home', () => {
       }
     ];
     const tree = renderer.create(
-      <Home posts={posts}/>
+      <MemoryRouter>
+        <Home posts={posts}/>
+      </MemoryRouter>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
