@@ -1,5 +1,4 @@
 import reducer from './users';
-import { exportAllDeclaration } from '@babel/types';
 
 describe('users reducer', () => {
   let state = {};
@@ -7,11 +6,11 @@ describe('users reducer', () => {
   beforeEach(() => {
     state = {
       users: [],
-      isloading: false
+      isLoading: false
     };
   });
 
-  it('it updates users state with an array of all users and passes actions through the promise middleware', () => {
+  it('it updates users state with an array of all users and passes actions through the promise middleware to update isLoading as false', () => {
     const action = {
       type: 'FETCH_USERS',
       loadStart: 'LOAD_USERS_START',
@@ -67,7 +66,6 @@ describe('users reducer', () => {
     };
 
     const results = reducer(state, action);
-    console.log(results);
     expect(results).toEqual({
       ...state,
       users: [
@@ -118,8 +116,19 @@ describe('users reducer', () => {
           }
         }
       ],
-      isloading: false
+      isLoading: false
     });
+  });
 
+  it('it updates isLoading state as true', () => {
+    const action = {
+      type: 'LOAD_USERS_START'
+    };
+
+    const result = reducer(state, action);
+    expect(result).toEqual({
+      ...state,
+      isLoading: true
+    });
   });
 });
