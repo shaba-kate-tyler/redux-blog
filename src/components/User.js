@@ -5,7 +5,7 @@ function User({ name, username, website, email }) {
   return (
     <div>
       <h3>{name}</h3>
-      <h4>@{username}</h4>
+      <h4>{username}</h4>
       <p>{website} / {email}</p>
     </div>
   );
