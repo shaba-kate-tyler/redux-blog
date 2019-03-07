@@ -5,3 +5,5 @@ export const getTop5Posts = state => {
     .sort((firstPost, secondPost) => secondPost.body.length - firstPost.body.length)
     .slice(0, 5);
 };
+
+export const getPostSearchTerm = state => state.posts.postSearchTerm;
