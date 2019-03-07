@@ -13,7 +13,7 @@ describe('Comment', () => {
     };
 
     const tree = renderer.create(
-      <Comment comment={comment}/>
+      <Comment {...comment}/>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

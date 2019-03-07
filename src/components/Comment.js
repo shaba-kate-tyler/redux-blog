@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comment({ comment }) {
+function Comment({ body, email }) {
   return (
     <>
-      <p>{comment.body}</p>
-      <h4>-{comment.email}</h4>
+      <p>{body}</p>
+      <h4>-{email}</h4>
     </>
   );
 }
 
 Comment.propTypes = {
-  comment: PropTypes.object.isRequired
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
 };
 
 export default Comment;
