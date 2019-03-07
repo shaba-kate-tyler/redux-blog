@@ -3,7 +3,7 @@ import {
   getTop5Posts,
   getPostSearchTerm,
   getFilteredPosts,
-  // getPostsForUser
+  getPostsForUser
 } from './posts';
 
 describe('post selectors', () => {
@@ -124,6 +124,13 @@ describe('post selectors', () => {
   });
 
   it('gets post for user', () => {
-    // const result = getPostsForUser(state, )
+    const result = getPostsForUser(state, 1);
+    expect(result).toEqual([
+      {
+        userId: 1,
+        title: 'a post',
+        body: 'a pfdsafdasfdasfdafda ost'
+      }
+    ]);
   });
 });
