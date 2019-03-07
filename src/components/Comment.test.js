@@ -15,6 +15,6 @@ describe('Comment', () => {
     const tree = renderer.create(
       <Comment comment={comment}/>
     ).toJSON();
-    expect(tree).toMatchSnapshot;
+    expect(tree).toMatchSnapshot();
   });
 });
