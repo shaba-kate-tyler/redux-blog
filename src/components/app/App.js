@@ -9,7 +9,7 @@ import Header from '../Header';
 import UserDetails from '../../containers/UserDetails';
 import AllUsers from '../../containers/AllUsers';
 import PostDetails from '../../containers/posts/PostDetails';
-
+import AllPosts from '../../containers/AllPosts';
 
 export default function App() {
   return (
@@ -20,6 +20,7 @@ export default function App() {
           <Route path="/users/:id" component={UserDetails}></Route>
           <Route path="/users" component={AllUsers}></Route>
           <Route path="/posts/:postId" component={PostDetails}></Route>
+          <Route path="/posts" component={AllPosts}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </>

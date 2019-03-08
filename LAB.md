@@ -22,11 +22,11 @@ get users, posts, and comments
   <!-- - `User` individual user item for a list -->
 
 - BONUS: `RegisterUserForm` form to register a new user
-    <!-- - `Posts' display a list of posts
-  <!-- - `Post` individual post item for a list has a Link to `PostDetails` --> -->
-- `PostDetails` display a post and all of its comments
-    <!-- - `Comments` list of comments
-  <!-- - `Comment` individual comment item for a list --> -->
+  <!-- - `Posts' display a list of posts
+    <!-- - `Post` individual post item for a list has a Link to `PostDetails` --> -->
+  <!-- - `PostDetails` display a post and all of its comments -->
+      <!-- - `Comments` list of comments
+    <!-- - `Comment` individual comment item for a list --> -->
 
 ### Containers
 
@@ -34,7 +34,7 @@ get users, posts, and comments
 <!-- - `AllUsers` display all users -->
 
 - `RegisterUser` create a new user
-- `FilterPosts` filter posts by title (for all users)
+  <!-- - `FilterPosts` filter posts by title (for all users) -->
 
 ### reducers
 
@@ -66,7 +66,7 @@ get users, posts, and comments
 - Posts
   <!-- - `getLongestPosts`
   - `getPosts` -->
-  - `getFilteredPosts`
+  <!-- - `getFilteredPosts` -->
     <!-- - `getPostsForUser` -->
 - Comments
   <!-- - `getComments` -->
