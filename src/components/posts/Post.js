@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Post({ title, id }) {
+function Post({ title, body, id }) {
   return (
-    <Router>
-      <>
-       <Link to={`/posts/${id}`}>{title}</Link>
-      </>
-    </Router>
+    <>
+      <Link to={`/posts/${id}`}>
+        <h2>{title}</h2>
+      </Link>
+        <p>{body}</p>
+    </>
   );
 }
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
 };
 
 export default Post;

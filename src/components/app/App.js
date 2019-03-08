@@ -4,8 +4,12 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import Home from '../Home';
+import Home from '../../containers/Home';
 import Header from '../Header';
+import UserDetails from '../../containers/UserDetails';
+import AllUsers from '../../containers/AllUsers';
+import PostDetails from '../../containers/posts/PostDetails';
+import AllPosts from '../../containers/AllPosts';
 
 export default function App() {
   return (
@@ -13,8 +17,10 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/posts/:id"></Route>
-          <Route path="/users"></Route>
+          <Route path="/users/:id" component={UserDetails}></Route>
+          <Route path="/users" component={AllUsers}></Route>
+          <Route path="/posts/:postId" component={PostDetails}></Route>
+          <Route path="/posts" component={AllPosts}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </>

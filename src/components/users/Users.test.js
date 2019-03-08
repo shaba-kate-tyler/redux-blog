@@ -1,7 +1,7 @@
 import React from 'react';
 import Users from './Users';
 import renderer from 'react-test-renderer';
-// import User from './User';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Users', () => {
   it('matches a snapshot', () => {
@@ -32,7 +32,9 @@ describe('Users', () => {
     };
 
     const tree = renderer.create(
-      <Users { ...props } />
+      <MemoryRouter>
+        <Users { ...props } />
+      </MemoryRouter>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

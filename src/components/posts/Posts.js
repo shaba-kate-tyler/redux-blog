@@ -7,6 +7,7 @@ function Posts({ posts }) {
     <li key={post.id}>
       <Post
         title={post.title}
+        body={post.body}
         id={post.id}
       />
     </li>
