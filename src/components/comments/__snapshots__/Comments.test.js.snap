@@ -4,14 +4,8 @@ exports[`Comments matches a snapshot 1`] = `
 <ul>
   <li>
     <p>
-      laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium
+      Comment:
     </p>
-    <h4>
-      -
-      Eliseo@gardner.biz
-    </h4>
-  </li>
-  <li>
     <p>
       laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium
     </p>
@@ -21,6 +15,21 @@ exports[`Comments matches a snapshot 1`] = `
     </h4>
   </li>
   <li>
+    <p>
+      Comment:
+    </p>
+    <p>
+      laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium
+    </p>
+    <h4>
+      -
+      Eliseo@gardner.biz
+    </h4>
+  </li>
+  <li>
+    <p>
+      Comment:
+    </p>
     <p>
       laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium
     </p>

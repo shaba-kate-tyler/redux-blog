@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 function Comment({ body, email }) {
   return (
     <>
+      <p>Comment:</p>
       <p>{body}</p>
       <h4>-{email}</h4>
     </>

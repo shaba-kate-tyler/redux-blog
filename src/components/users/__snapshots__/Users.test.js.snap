@@ -3,64 +3,73 @@
 exports[`Users matches a snapshot 1`] = `
 <ul>
   <li>
-    <a
-      href="/users/1"
-      onClick={[Function]}
-    >
-      <div>
-        <h3>
-          kaiya
-        </h3>
+    <div>
+      <h3>
+        Name: 
+        kaiya
+      </h3>
+      <a
+        href="/users/1"
+        onClick={[Function]}
+      >
         <h4>
+          Username: 
           ladybeard
         </h4>
-        <p>
-          schnepherds4life.org
-           / 
-          itsme@kai.com
-        </p>
-      </div>
-    </a>
+      </a>
+      <p>
+        Webiste/Email: 
+        schnepherds4life.org
+         / 
+        itsme@kai.com
+      </p>
+    </div>
   </li>
   <li>
-    <a
-      href="/users/2"
-      onClick={[Function]}
-    >
-      <div>
-        <h3>
-          kingsley
-        </h3>
+    <div>
+      <h3>
+        Name: 
+        kingsley
+      </h3>
+      <a
+        href="/users/2"
+        onClick={[Function]}
+      >
         <h4>
+          Username: 
           fathersLittleTiger
         </h4>
-        <p>
-          carolKibble.org
-           / 
-          yasssss@kitty.com
-        </p>
-      </div>
-    </a>
+      </a>
+      <p>
+        Webiste/Email: 
+        carolKibble.org
+         / 
+        yasssss@kitty.com
+      </p>
+    </div>
   </li>
   <li>
-    <a
-      href="/users/3"
-      onClick={[Function]}
-    >
-      <div>
-        <h3>
-          tyler
-        </h3>
+    <div>
+      <h3>
+        Name: 
+        tyler
+      </h3>
+      <a
+        href="/users/3"
+        onClick={[Function]}
+      >
         <h4>
+          Username: 
           tylerCorbett
         </h4>
-        <p>
-          tylerTheDev.org
-           / 
-          sayhi@tyler.com
-        </p>
-      </div>
-    </a>
+      </a>
+      <p>
+        Webiste/Email: 
+        tylerTheDev.org
+         / 
+        sayhi@tyler.com
+      </p>
+    </div>
   </li>
 </ul>
 `;

@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 function User({ id, name, username, website, email }) {
   return (
-    <Link to={`/users/${id}`}>
-      <div>
-        <h3>{name}</h3>
-        <h4>{username}</h4>
-        <p>{website} / {email}</p>
-      </div>
-    </Link>
+    <div>
+      <h3>Name: {name}</h3>
+      <Link to={`/users/${id}`}>
+        <h4>Username: {username}</h4>
+      </Link>
+      <p>Webiste/Email: {website} / {email}</p>
+    </div>
   );
 }
 
