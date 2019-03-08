@@ -21,12 +21,13 @@ get users, posts, and comments
 <!-- - `UserDetails` displays a user's `name`, `username`, `email`, and their `posts` -->
   <!-- - `User` individual user item for a list -->
 
-- BONUS: `RegisterUserForm` form to register a new user
+<!-- - BONUS: `RegisterUserForm` form to register a new user -->
   <!-- - `Posts' display a list of posts
     <!-- - `Post` individual post item for a list has a Link to `PostDetails` --> -->
   <!-- - `PostDetails` display a post and all of its comments -->
+
       <!-- - `Comments` list of comments
-    <!-- - `Comment` individual comment item for a list --> -->
+    - `Comment` individual comment item for a list -->
 
 ### Containers
 
