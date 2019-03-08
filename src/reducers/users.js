@@ -7,7 +7,14 @@ import {
 
 const initialState = {
   users: [],
-  isLoading: false
+  isLoading: false,
+  register: {
+    name: 'name',
+    username: 'username',
+    password: 'password',
+    website: 'website.com',
+    email: 'mail@email.com'
+  }
 };
 
 export default function reducer(state = initialState, { type, payload }) {
@@ -15,7 +22,10 @@ export default function reducer(state = initialState, { type, payload }) {
     case REGISTER_USER:
       return {
         ...state,
-        users: [...state, { ...payload }]
+        users: [
+          ...state.users, 
+          { ...payload }
+        ]
       };
     case FETCH_USERS:
       return {
