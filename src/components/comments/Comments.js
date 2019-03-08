@@ -1,9 +1,10 @@
 import CreateList from '../higher-order/CreateList';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import styles from '../../styles/Users.css';
 
 function Comments({ comments }) {
-  return CreateList(Comment, comments);
+  return CreateList(Comment, comments, styles.Users);
 }
 
 Comments.propTypes = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CreateList(Component, contents) {
+function CreateList(Component, contents, className) {
   const contentsList = contents.map(content => 
     <li key={content.id}>
       <Component {...content} />
@@ -9,7 +9,7 @@ function CreateList(Component, contents) {
   );
 
   return (
-    <ul>
+    <ul className={className}>
       {contentsList}
     </ul>
   );
