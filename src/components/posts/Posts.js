@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import PropTypes from 'prop-types';
+import styles from '../styles/Posts.css';
 
 function Posts({ posts }) {
   const postsList = posts.map(post => 
@@ -14,7 +15,7 @@ function Posts({ posts }) {
   );
 
   return (
-    <ul>
+    <ul className={styles.Posts}>
       {postsList}
     </ul>
   );
