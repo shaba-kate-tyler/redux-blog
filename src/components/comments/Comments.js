@@ -1,16 +1,9 @@
-import React from 'react';
+import CreateList from '../higher-order/CreateList';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 function Comments({ comments }) {
-  const commentsList = comments.map(comment => <li key={comment.id}>{<Comment {...comment}/>}</li>);
-  return (
-    <>
-      <ul>
-        {commentsList}
-      </ul>
-    </>
-  );
+  return CreateList(Comment, comments);
 }
 
 Comments.propTypes = {
