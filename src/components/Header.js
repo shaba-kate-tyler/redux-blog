@@ -5,8 +5,8 @@ import styles from './styles/Header.css';
 export default function Header() {
   return (
     <div className={styles.Header}>
-      <Link to="/">Home</Link>
-      <Link to="/users">Users</Link>
+      <Link to="/" className={styles.animate}>Home</Link>
+      <Link to="/users" className={styles.animate}>Users</Link>
     </div>
   );
 }
