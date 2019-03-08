@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { getAllUsers } from '../selectors/users';
-import Users from '../components/users/Users';
+import { getAllUsers } from '../../selectors/users';
+import Users from '../../components/users/Users';
 import PropTypes from 'prop-types';
-import { fetchUsers } from '../actions/users';
+import { fetchUsers } from '../../actions/users';
 
 const mapStateToProps = state => ({
   users: getAllUsers(state)

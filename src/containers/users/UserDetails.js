@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { getCurrentUser } from '../selectors/users';
-import { getPostsForUser } from '../selectors/posts';
-import { fetchUsers } from '../actions/users';
-import { fetchPosts } from '../actions/posts';
-import User from '../components/users/User';
-import Posts from '../components/posts/Posts';
+import { getCurrentUser } from '../../selectors/users';
+import { getPostsForUser } from '../../selectors/posts';
+import { fetchUsers } from '../../actions/users';
+import { fetchPosts } from '../../actions/posts';
+import User from '../../components/users/User';
+import Posts from '../../components/posts/Posts';
 import PropTypes from 'prop-types';
 
 class UserDetails extends PureComponent {
