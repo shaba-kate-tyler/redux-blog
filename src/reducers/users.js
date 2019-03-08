@@ -1,7 +1,8 @@
 import { 
   FETCH_USERS, 
   LOAD_USERS_START,
-  LOAD_USERS_END 
+  LOAD_USERS_END,
+  REGISTER_USER 
 } from '../actions/users';
 
 const initialState = {
@@ -11,6 +12,11 @@ const initialState = {
 
 export default function reducer(state = initialState, { type, payload }) {
   switch(type) {
+    case REGISTER_USER:
+      return {
+        ...state,
+        users: [...state, { ...payload }]
+      };
     case FETCH_USERS:
       return {
         ...state,
