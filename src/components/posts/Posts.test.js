@@ -7,20 +7,20 @@ describe('Posts', () => {
   it('matches a snapshot of Posts', () => {
     const posts = [
       {
-        id: '1',
-        userId: '10',
+        id: 1,
+        userId: 10,
         title: 'a post',
         body: 'This is a post'
       },
       {
-        id: '2',
-        userId: '11',
+        id: 2,
+        userId: 11,
         title: 'another post',
         body: 'This is a post'
       },
       {
-        id: '3',
-        userId: '11',
+        id: 3,
+        userId: 11,
         title: 'another other post',
         body: 'This is a post'
       }
