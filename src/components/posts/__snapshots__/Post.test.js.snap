@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post matches a post snapshot 1`] = `
-Array [
+<div
+  className="Post"
+>
   <a
     href="/posts/2"
     onClick={[Function]}
@@ -9,9 +11,9 @@ Array [
     <h2>
       A Post
     </h2>
-  </a>,
+  </a>
   <p>
     This is a post on a rant
-  </p>,
-]
+  </p>
+</div>
 `;

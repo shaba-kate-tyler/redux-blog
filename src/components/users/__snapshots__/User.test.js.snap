@@ -2,6 +2,7 @@
 
 exports[`User matches a snapshot 1`] = `
 <a
+  className="User"
   href="/users/3"
   onClick={[Function]}
 >
