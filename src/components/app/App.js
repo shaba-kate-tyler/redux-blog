@@ -6,10 +6,10 @@ import {
 } from 'react-router-dom';
 import Home from '../../containers/Home';
 import Header from '../Header';
-import UserDetails from '../../containers/UserDetails';
-import AllUsers from '../../containers/AllUsers';
+import UserDetails from '../../containers/users/UserDetails';
+import AllUsers from '../../containers/users/AllUsers';
 import PostDetails from '../../containers/posts/PostDetails';
-import AllPosts from '../../containers/AllPosts';
+import AllPosts from '../../containers/posts/AllPosts';
 import RegisterUser from '../../containers/RegisterUser';
 
 export default function App() {

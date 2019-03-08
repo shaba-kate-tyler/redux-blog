@@ -1,24 +1,10 @@
-import React from 'react';
-import Post from './Post';
+import CreateList from '../higher-order/CreateList';
 import PropTypes from 'prop-types';
+import Post from './Post';
 import styles from '../styles/Posts.css';
 
 function Posts({ posts }) {
-  const postsList = posts.map(post => 
-    <li key={post.id}>
-      <Post
-        title={post.title}
-        body={post.body}
-        id={post.id}
-      />
-    </li>
-  );
-
-  return (
-    <ul className={styles.Posts}>
-      {postsList}
-    </ul>
-  );
+  return CreateList(Post, posts, styles.Posts);
 }
 
 Posts.propTypes = {
