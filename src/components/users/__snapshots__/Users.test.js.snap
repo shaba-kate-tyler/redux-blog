@@ -15,17 +15,15 @@ exports[`Users matches a snapshot 1`] = `
           kaiya
         </h3>
         <h4>
-          Username: 
           ladybeard
         </h4>
-      </a>
-      <p>
-        Webiste/Email: 
-        schnepherds4life.org
-         / 
-        itsme@kai.com
-      </p>
-    </div>
+        <p>
+          schnepherds4life.org
+           / 
+          itsme@kai.com
+        </p>
+      </div>
+    </a>
   </li>
   <li>
     <a
@@ -38,17 +36,15 @@ exports[`Users matches a snapshot 1`] = `
           kingsley
         </h3>
         <h4>
-          Username: 
           fathersLittleTiger
         </h4>
-      </a>
-      <p>
-        Webiste/Email: 
-        carolKibble.org
-         / 
-        yasssss@kitty.com
-      </p>
-    </div>
+        <p>
+          carolKibble.org
+           / 
+          yasssss@kitty.com
+        </p>
+      </div>
+    </a>
   </li>
   <li>
     <a
@@ -61,17 +57,15 @@ exports[`Users matches a snapshot 1`] = `
           tyler
         </h3>
         <h4>
-          Username: 
           tylerCorbett
         </h4>
-      </a>
-      <p>
-        Webiste/Email: 
-        tylerTheDev.org
-         / 
-        sayhi@tyler.com
-      </p>
-    </div>
+        <p>
+          tylerTheDev.org
+           / 
+          sayhi@tyler.com
+        </p>
+      </div>
+    </a>
   </li>
 </ul>
 `;
