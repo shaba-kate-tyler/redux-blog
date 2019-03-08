@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../selectors/users';
-import { getAllPosts } from '../selectors/posts';
+import { getPostsForUser } from '../selectors/posts';
 import { fetchUsers } from '../actions/users';
 import { fetchPosts } from '../actions/posts';
 import User from '../components/users/User';
@@ -20,19 +20,22 @@ class UserDetails extends PureComponent {
   }
 
   render() {
+    const { user, posts } = this.props;
     return (
       <>
-      <User { ...this.props }/>
-      <Posts { ...this.props }/>
+      <User {...user}/>
+      <Posts posts={posts}/>
       </>
     );
   }
 }
 
-const mapStateToProps = (state, props) => ({
-  user: getCurrentUser(state, props.match.params.id),
-  posts: getAllPosts(state)
-});
+const mapStateToProps = (state, props) => {
+  return ({
+    user: getCurrentUser(state, props.match.params.id),
+    posts: getPostsForUser(state, props.match.params.id)
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   fetch() {

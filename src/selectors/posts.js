@@ -16,5 +16,5 @@ export const getFilteredPosts = state => {
 
 export const getPostsForUser = (state, userId) => {
   return getAllPosts(state)
-    .filter(post => post.userId === userId);
+    .filter(post => post.userId === Number(userId));
 };

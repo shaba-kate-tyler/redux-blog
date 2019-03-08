@@ -112,7 +112,7 @@ describe('user selectors', () => {
 
   it('gets a user by id', () => {
     const result = getCurrentUser(state, 1);
-    expect(result).toEqual([{
+    expect(result).toEqual({
       id: 1,
       name: 'Leanne Graham',
       username: 'Bret',
@@ -134,6 +134,6 @@ describe('user selectors', () => {
         catchPhrase: 'Multi-layered client-server neural-net',
         bs: 'harness real-time e-markets'
       }
-    }]);
+    });
   });
 });

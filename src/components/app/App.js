@@ -17,8 +17,8 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/users" component={AllUsers}></Route>
           <Route path="/users/:id" component={UserDetails}></Route>
+          <Route path="/users" component={AllUsers}></Route>
           <Route path="/posts/:userId/:postId" component={PostDetails}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>

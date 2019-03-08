@@ -10,8 +10,8 @@ describe('Post', () => {
         <Post
           title={'A Post'}
           body={'This is a post on a rant'}
-          userId={'1'}
-          postId={'2'}
+          userId={1}
+          postId={2}
         />
       </MemoryRouter>
     ).toJSON();
