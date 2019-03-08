@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => ({
     };
     dispatch(factoryMethod[target.name](target.value));
   },
-  onSubmit(event, name, username, password, website, email) {
+  onSubmit(name, username, password, website, email, event) {
     event.preventDefault();
     dispatch(registerUser({ name, username, password, website, email }));
   }
