@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-export const withDisplayContent = ({ contentName, getContent, fetches, Component }) => {
+export const withDisplayContent = ({ contents, fetches, Component }) => {
   class DisplayContent extends PureComponent {
     static propTypes = {
       custProps: PropTypes.object.isRequired,
@@ -21,11 +21,12 @@ export const withDisplayContent = ({ contentName, getContent, fetches, Component
     }
   }
   
-  const mapStateToProps = state => ({
-    custProps: {
-      [contentName]: getContent(state)
-    }
-  });
+  const mapStateToProps = state => {
+    const custProps = {};
+    contents.every(content => custProps[content.name] = content.getContent(state));
+
+    return { custProps };
+  };
 
   const mapDispatchToProps = dispatch => ({
     fetch() {

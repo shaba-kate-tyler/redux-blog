@@ -4,8 +4,12 @@ import { fetchPosts } from '../actions/posts';
 import Posts from '../components/posts/Posts';
 
 export default withDisplayContent({
-  contentName: 'posts',
-  getContent: getTop5Posts,
+  contents: [
+    {
+      name: 'posts',
+      getContent: getTop5Posts
+    }
+  ],
   fetches: [fetchPosts],
   Component: Posts
 });
