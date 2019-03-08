@@ -4,7 +4,7 @@ exports[`Posts matches a snapshot of Posts 1`] = `
 <ul>
   <li>
     <a
-      href="/posts/10/1"
+      href="/posts/1"
       onClick={[Function]}
     >
       <h2>
@@ -17,7 +17,7 @@ exports[`Posts matches a snapshot of Posts 1`] = `
   </li>
   <li>
     <a
-      href="/posts/11/2"
+      href="/posts/2"
       onClick={[Function]}
     >
       <h2>
@@ -30,7 +30,7 @@ exports[`Posts matches a snapshot of Posts 1`] = `
   </li>
   <li>
     <a
-      href="/posts/11/3"
+      href="/posts/3"
       onClick={[Function]}
     >
       <h2>

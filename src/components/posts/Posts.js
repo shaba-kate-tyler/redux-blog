@@ -8,8 +8,7 @@ function Posts({ posts }) {
       <Post
         title={post.title}
         body={post.body}
-        userId={post.userId}
-        postId={post.id}
+        id={post.id}
       />
     </li>
   );
