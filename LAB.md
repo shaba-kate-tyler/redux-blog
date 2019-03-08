@@ -30,11 +30,12 @@ get users, posts, and comments
 
 ### Containers
 
-<!-- - `Home` display the top 5 longest posts -->
-<!-- - `AllUsers` display all users -->
-
-- `RegisterUser` create a new user
-  <!-- - `FilterPosts` filter posts by title (for all users) -->
+* `Home` display the top 5 longest posts
+* `AllUsers` display all users
+* `RegisterUser` create a new user
+* `FilterPosts` filter posts by title (for all users)
+* `UserDetailsContainer`
+* `PostDetailsContainer`
 
 ### reducers
 
