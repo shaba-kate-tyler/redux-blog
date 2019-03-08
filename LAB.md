@@ -18,8 +18,9 @@ get users, posts, and comments
 - `Header` with nav
 - `Users` display a list of users -->
 
-- `UserDetails` displays a user's `name`, `username`, `email`, and their `posts`
+<!-- - `UserDetails` displays a user's `name`, `username`, `email`, and their `posts` -->
   <!-- - `User` individual user item for a list -->
+
 - BONUS: `RegisterUserForm` form to register a new user
     <!-- - `Posts' display a list of posts
   <!-- - `Post` individual post item for a list has a Link to `PostDetails` --> -->
@@ -29,8 +30,9 @@ get users, posts, and comments
 
 ### Containers
 
-- `Home` display the top 5 longest posts
-- `AllUsers` display all users
+<!-- - `Home` display the top 5 longest posts -->
+<!-- - `AllUsers` display all users -->
+
 - `RegisterUser` create a new user
 - `FilterPosts` filter posts by title (for all users)
 
@@ -65,7 +67,7 @@ get users, posts, and comments
   <!-- - `getLongestPosts`
   - `getPosts` -->
   - `getFilteredPosts`
-  - `getPostsForUser`
+    <!-- - `getPostsForUser` -->
 - Comments
   <!-- - `getComments` -->
 
@@ -93,5 +95,5 @@ get users, posts, and comments
 <!-- - Snapshot test components -->
 <!-- - mock and test the `blogService` -->
 
-- Unit test reducers, selectors, actions
-  - actions should use the `blogService` mock
+<!-- - Unit test reducers, selectors, actions -->
+  <!-- - actions should use the `blogService` mock -->

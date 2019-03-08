@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 class UserDetails extends PureComponent {
   static propTypes = {
-    user: PropTypes.object.isRequired,
+    user: PropTypes.object,
     posts: PropTypes.array.isRequired,
     fetch: PropTypes.func.isRequired
   };
@@ -23,19 +23,17 @@ class UserDetails extends PureComponent {
     const { user, posts } = this.props;
     return (
       <>
-      <User {...user}/>
-      <Posts posts={posts}/>
+      {user && <User {...user}/>}
+      {posts && <Posts posts={posts}/>}
       </>
     );
   }
 }
 
-const mapStateToProps = (state, props) => {
-  return ({
-    user: getCurrentUser(state, props.match.params.id),
-    posts: getPostsForUser(state, props.match.params.id)
-  });
-};
+const mapStateToProps = (state, props) => ({
+  user: getCurrentUser(state, props.match.params.id),
+  posts: getPostsForUser(state, props.match.params.id)
+});
 
 const mapDispatchToProps = dispatch => ({
   fetch() {

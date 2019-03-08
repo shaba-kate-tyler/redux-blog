@@ -18,3 +18,5 @@ export const getPostsForUser = (state, userId) => {
   return getAllPosts(state)
     .filter(post => post.userId === Number(userId));
 };
+
+export const getPostById = (state, id) => getAllPosts(state).find(post => post.id === Number(id));

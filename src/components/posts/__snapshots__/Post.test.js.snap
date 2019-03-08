@@ -3,7 +3,7 @@
 exports[`Post matches a post snapshot 1`] = `
 Array [
   <a
-    href="/posts/1/2"
+    href="/posts/2"
     onClick={[Function]}
   >
     <h2>

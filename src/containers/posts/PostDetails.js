@@ -1,30 +1,49 @@
 import { connect } from 'react-redux';
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Posts from '../../components/posts/Posts';
+import Post from '../../components/posts/Post';
 import Comments from '../../components/comments/Comments';
-import { getPostsForUser } from '../../selectors/posts';
+import { getPostById } from '../../selectors/posts';
 import { getCommentsByPost } from '../../selectors/comments';
+import { fetchPosts } from '../../actions/posts';
+import { fetchComments } from '../../actions/comments';
 
-function PostDetail({ posts, comments }) {
-  return (
+class PostDetail extends PureComponent {
+  static propTypes = {
+    post: PropTypes.object,
+    comments: PropTypes.array.isRequired,
+    fetch: PropTypes.func.isRequired
+  };
+
+  componentDidMount() {
+    this.props.fetch();
+  }
+  
+  render() {
+    const { post, comments } = this.props;
+    return (
     <>
-      <Posts posts={posts} />
-      <Comments comments={comments} />
+      {post && <Post { ...post } />}
+      {comments && <Comments comments={comments} />}
     </>
-  );
+    );
+
+  }
 }
 
-PostDetail.propTypes = {
-  posts: PropTypes.array.isRequired,
-  comments: PropTypes.array.isRequired
-};
-
 const mapStateToProps = (state, props) => ({
-  posts: getPostsForUser(state, props.match.params.userId),
+  post: getPostById(state, props.match.params.postId),
   comments: getCommentsByPost(state, props.match.params.postId)
 });
 
+const mapDispatchToProps = dispatch => ({
+  fetch() {
+    dispatch(fetchPosts());
+    dispatch(fetchComments());
+  }
+});
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PostDetail);
