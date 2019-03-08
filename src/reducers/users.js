@@ -5,7 +5,6 @@ import {
   REGISTER_USER,
   UPDATE_REG_NAME,
   UPDATE_REG_USERNAME,
-  UPDATE_REG_PASSWORD,
   UPDATE_REG_WEBSITE,
   UPDATE_REG_EMAIL
 } from '../actions/users';
@@ -16,7 +15,6 @@ const initialState = {
   register: {
     name: 'name',
     username: 'username',
-    password: 'password',
     website: 'website.com',
     email: 'mail@email.com'
   }
@@ -38,14 +36,6 @@ export default function reducer(state = initialState, { type, payload }) {
         register: {
           ...state.register,
           username: payload
-        }
-      };
-    case UPDATE_REG_PASSWORD:
-      return {
-        ...state,
-        register: {
-          ...state.register,
-          password: payload
         }
       };
     case UPDATE_REG_WEBSITE:

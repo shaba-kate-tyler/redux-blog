@@ -2,16 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import RegisterUserForm from '../components/users/RegisterUserForm';
 import PropTypes from 'prop-types';
-import { getRegisterName, getRegisterUsername, getRegisterPassword, getRegisterWebsite, getRegisterEmail } from '../selectors/users';
-import { registerUser, updateRegName, updateRegUsername, updateRegPassword, updateRegWebsite, updateRegEmail } from '../actions/users';
+import { getRegisterName, getRegisterUsername, getRegisterWebsite, getRegisterEmail } from '../selectors/users';
+import { updateRegName, updateRegUsername, updateRegWebsite, updateRegEmail, registerUser } from '../actions/users';
 
-function RegisterUser({ name, username, password, website, email, onSubmit, onChange }) {
+function RegisterUser({ name, username, website, email, onSubmit, onChange }) {
   return (
     <RegisterUserForm 
-      onSubmit={onSubmit.bind(null, name, username, password, website, email)}
+      onSubmit={onSubmit.bind(null, name, username, website, email)}
       name={name}
       username={username}
-      password={password}
       website={website}
       email={email}
       onChange={onChange}
@@ -22,7 +21,6 @@ function RegisterUser({ name, username, password, website, email, onSubmit, onCh
 const mapStateToProps = state => ({
   name: getRegisterName(state),
   username: getRegisterUsername(state),
-  password: getRegisterPassword(state),
   website: getRegisterWebsite(state),
   email: getRegisterEmail(state)
 });
@@ -32,22 +30,20 @@ const mapDispatchToProps = dispatch => ({
     const factoryMethod = {
       name: updateRegName,
       username: updateRegUsername,
-      password: updateRegPassword,
       website: updateRegWebsite,
       email: updateRegEmail
     };
     dispatch(factoryMethod[target.name](target.value));
   },
-  onSubmit(name, username, password, website, email, event) {
+  onSubmit(name, username, website, email, event) {
     event.preventDefault();
-    dispatch(registerUser({ name, username, password, website, email }));
+    dispatch(registerUser({ name, username, website, email }));
   }
 });
 
 RegisterUser.propTypes = {
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,

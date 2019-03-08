@@ -1,4 +1,4 @@
-import { getUsers } from '../services/blogApi';
+import { getUsers, registerNewUser } from '../services/blogApi';
 
 export const FETCH_USERS = 'FETCH_USERS';
 export const LOAD_USERS_START = 'LOAD_USERS_START';
@@ -12,9 +12,11 @@ export const fetchUsers = () => ({
 });
 
 export const REGISTER_USER = 'REGISTER_USER';
-export const registerUser = user => ({
+export const registerUser = (user) => ({
   type: REGISTER_USER,
-  payload: user
+  loadStart: LOAD_USERS_START,
+  loadEnd: LOAD_USERS_END,
+  payload: registerNewUser(user)
 });
 
 export const UPDATE_REG_NAME = 'UPDATE_REG_NAME';
@@ -27,12 +29,6 @@ export const UPDATE_REG_USERNAME = 'UPDATE_REG_USERNAME';
 export const updateRegUsername = username => ({
   type: UPDATE_REG_USERNAME,
   payload: username
-});
-
-export const UPDATE_REG_PASSWORD = 'UPDATE_REG_PASSWORD';
-export const updateRegPassword = password => ({
-  type: UPDATE_REG_PASSWORD,
-  payload: password
 });
 
 export const UPDATE_REG_WEBSITE = 'UPDATE_REG_WEBSITE';

@@ -6,8 +6,6 @@ export const getRegisterName = state => state.users.register.name;
 
 export const getRegisterUsername = state => state.users.register.username;
 
-export const getRegisterPassword = state => state.users.register.password;
-
 export const getRegisterWebsite = state => state.users.register.website;
 
 export const getRegisterEmail = state => state.users.register.email;
