@@ -18,3 +18,4 @@ export const updatePostSearchTerm = term => ({
   loadEnd: LOAD_POSTS_END,
   payload: term
 });
+

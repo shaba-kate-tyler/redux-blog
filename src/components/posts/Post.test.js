@@ -14,7 +14,6 @@ describe('Post', () => {
         />
       </MemoryRouter>
     ).toJSON();
-
     expect(tree).toMatchSnapshot();
   });
 });
