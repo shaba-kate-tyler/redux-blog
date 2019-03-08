@@ -5,16 +5,6 @@ import { getTop5Posts } from '../selectors/posts';
 import { fetchPosts } from '../actions/posts';
 import Posts from '../components/posts/Posts';
 
-const mapStateToProps = state => ({
-  posts: getTop5Posts(state)
-});
-
-const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(fetchPosts());
-  }
-});
-
 class Home extends PureComponent {
   static propTypes = {
     posts: PropTypes.array.isRequired,
@@ -31,5 +21,15 @@ class Home extends PureComponent {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  posts: getTop5Posts(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetch() {
+    dispatch(fetchPosts());
+  }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

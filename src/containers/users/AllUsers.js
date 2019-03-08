@@ -1,19 +1,9 @@
-import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { getAllUsers } from '../../selectors/users';
-import Users from '../../components/users/Users';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { getAllUsers } from '../../selectors/users';
 import { fetchUsers } from '../../actions/users';
-
-const mapStateToProps = state => ({
-  users: getAllUsers(state)
-});
-
-const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(fetchUsers());
-  }
-});
+import Users from '../../components/users/Users';
 
 class AllUsers extends PureComponent {
   static propTypes = {
@@ -33,5 +23,15 @@ class AllUsers extends PureComponent {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  users: getAllUsers(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetch() {
+    dispatch(fetchUsers());
+  }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllUsers);
