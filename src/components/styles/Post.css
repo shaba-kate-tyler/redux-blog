@@ -1,3 +1,14 @@
 .Post {
-    background-color: blue;
+    font-family: 'Roboto', sans-serif;
+    padding: 1px;
+    margin: 2px;
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        color: rgb(66,139,202);
+    }
+    p {
+        font-weight: 100;
+    }
 }
