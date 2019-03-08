@@ -10,4 +10,7 @@
         transition: 0.2s;
         cursor: pointer;
     }
+    li {
+        margin: 4px;
+    }
 }
