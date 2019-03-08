@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Users matches a snapshot 1`] = `
-<ul>
+<ul
+  className="Users"
+>
   <li>
-    <div>
-      <h3>
-        Name: 
-        kaiya
-      </h3>
-      <a
-        href="/users/1"
-        onClick={[Function]}
-      >
+    <a
+      className="User"
+      href="/users/1"
+      onClick={[Function]}
+    >
+      <div>
+        <h3>
+          kaiya
+        </h3>
         <h4>
           Username: 
           ladybeard
@@ -26,15 +28,15 @@ exports[`Users matches a snapshot 1`] = `
     </div>
   </li>
   <li>
-    <div>
-      <h3>
-        Name: 
-        kingsley
-      </h3>
-      <a
-        href="/users/2"
-        onClick={[Function]}
-      >
+    <a
+      className="User"
+      href="/users/2"
+      onClick={[Function]}
+    >
+      <div>
+        <h3>
+          kingsley
+        </h3>
         <h4>
           Username: 
           fathersLittleTiger
@@ -49,15 +51,15 @@ exports[`Users matches a snapshot 1`] = `
     </div>
   </li>
   <li>
-    <div>
-      <h3>
-        Name: 
-        tyler
-      </h3>
-      <a
-        href="/users/3"
-        onClick={[Function]}
-      >
+    <a
+      className="User"
+      href="/users/3"
+      onClick={[Function]}
+    >
+      <div>
+        <h3>
+          tyler
+        </h3>
         <h4>
           Username: 
           tylerCorbett

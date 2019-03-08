@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Comment matches a snapshot 1`] = `
-Array [
+<div
+  className="Comment"
+>
   <p>
     Comment:
   </p>,
   <p>
     laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium
-  </p>,
+  </p>
   <h4>
     -
     Eliseo@gardner.biz
-  </h4>,
-]
+  </h4>
+</div>
 `;
