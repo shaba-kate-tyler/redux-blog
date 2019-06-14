@@ -9,14 +9,16 @@
 * React
 * Redux
 * Material UI
+* Babel
+* Webpack
 
 ## To Start
 
-Download or clone this repo
-
-`npm start`
-
-Point your browser to `https://localhost:7890`
+* Download or clone this repo
+* `cd redux-blog`
+* `npm i`
+* `npm start`
+* Point your browser to `https://localhost:7890`
 
 
 
